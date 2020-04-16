@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.EditList">
+    <ImageView
+        android:layout_width="180dp"
+        android:layout_height="260dp"
+        android:src="@color/colorPrimaryDark"
+        android:id="@+id/poster_edit"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TITLE"
+        android:id="@+id/judul_edit"
+        android:textSize="30dp"
+        android:gravity="center"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RELEASE"
+        android:id="@+id/release_edit"
+        android:textSize="20dp"
+        android:gravity="center"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="tanggal nonton"
+        android:id="@+id/date_edit"
+        android:gravity="center"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="keterangan"
+        android:id="@+id/keterangan_edit"
+        android:gravity="center"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="25dp"
+        android:text="Submit"
+        android:id="@+id/submit_edit"
+        android:layout_gravity="center"/>
+
+</LinearLayout>
