@@ -14,13 +14,19 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.latihanapi.Activity.EditList;
+import com.example.latihanapi.Database.AppDatabase;
 import com.example.latihanapi.Database.DataList;
+import com.example.latihanapi.Database.DeleteList;
+import com.example.latihanapi.Fragment.FragmentList;
+import com.example.latihanapi.MainActivity;
 import com.example.latihanapi.R;
 
 import java.util.ArrayList;
 
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     private static String BASE_IMAGE_URL = "https://image.tmdb.org/t/p/w185/";
+    private AppDatabase appDatabase;
+    private DataList item = new DataList();
 
     public Context getContext() {
         return context;
@@ -71,8 +77,17 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         holder.bhapus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getContext(), EditList.class);
+
+                item.setId(getDataList().get(position).getId());
+                item.setPoster(getDataList().get(position).getPoster());
+                item.setDetail(getDataList().get(position).getDetail());
+                item.setRelease(getDataList().get(position).getRelease());
+                item.setDate_watch(getDataList().get(position).getDate_watch());
+                item.setTitle(getDataList().get(position).getTitle());
+                appDatabase = appDatabase.initDB(getContext().getApplicationContext());
+                Intent intent = new Intent(getContext(), MainActivity.class);
                 context.startActivity(intent);
+                new DeleteList(appDatabase,item).execute();
             }
         });
     }

@@ -1,6 +1,7 @@
 package com.example.latihanapi.Database;
 
 import androidx.room.Dao;
+import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 
@@ -13,4 +14,7 @@ public interface DataListDao {
 
     @Query("Select * from list_movie")
     DataList[] getData();
+
+    @Delete
+    void deleteData(DataList item);
 }
