@@ -71,6 +71,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
                 intent.putExtra("release",getDataList().get(position).getRelease());
                 intent.putExtra("date",getDataList().get(position).getDate_watch());
                 intent.putExtra("detail",getDataList().get(position).getDetail());
+                intent.putExtra("id",getDataList().get(position).getId());
                 context.startActivity(intent);
             }
         });

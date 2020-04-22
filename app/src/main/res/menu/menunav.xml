@@ -2,15 +2,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
+        android:id="@+id/buttonlist"
+        android:title="List"
+        android:icon="@drawable/list_movie"
+        app:showAsAction="ifRoom" />
+    <item
 
         android:title="movie"
         android:id="@+id/buttonnavmovie"
         android:icon="@drawable/movie"
         app:showAsAction="ifRoom" />
-    <item
-        android:id="@+id/buttonlist"
-        android:title="List"
-        android:icon="@drawable/list_movie"
-        app:showAsAction="ifRoom" />
+
 
 </menu>

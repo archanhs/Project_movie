@@ -14,7 +14,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
     BottomNavigationView bottomNavigationView;
-    Fragment selectedFragment = new FragmentMovie();
+    Fragment selectedFragment = new FragmentList();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
