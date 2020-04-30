@@ -26,10 +26,6 @@ public class MovieViewModel extends ViewModel {
             @Override
             public void onResponse(Call<MovieDiscoverResponse> call, Response<MovieDiscoverResponse> response) {
                 MovieDiscoverResponse responseDiscover = response.body();
-                Dates date = new Dates();
-                date.setMinimum("2020-01-12");
-                date.setMaximum("2020-05-12");
-                responseDiscover.setDates(date);
                 if(responseDiscover != null && responseDiscover.getResults()!=null){
                     ArrayList<MovieResultsItem> movieResultsItems = responseDiscover.getResults();
                     listDiscoverMovie.postValue(movieResultsItems);
